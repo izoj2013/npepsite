@@ -1,0 +1,18 @@
+{% extends 'acrmipsite/base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="container home-bucket">
+        <div class="home-heading grid-item-1">
+            <h2 class="page-title">Smart Grid Systems @EEE Research Group - UNZA</h2>
+        </div>
+        <div class="image grid-item-2 flex-image">
+                <img class="it-img-x" src="{% static 'acrmipsite/images/smart_grids_01.jpg'%}" alt="">
+                <img class="it-img-x" src="{% static 'acrmipsite/images/smart_grids_02.jpg'%}" alt="">
+        </div>
+        <div class="text-content grid-item-3">
+            <p>{% lorem 10 b random %}</p>
+        </div>
+    </div>
+{% endblock %}

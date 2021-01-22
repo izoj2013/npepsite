@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+        <link  rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'acrmipsite/css/main.css'%}">
+        <title>African Computing Renainssance</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item header">
+                <ul class="primary-menu">
+                    <li class="flex-child-1"><a href="{% url 'acr-home' %}"><i class="fa fa-home"></i>Home</a></li>
+                    <li class="flex-child-1"><a href="{% url 'about-us' %}"><i class="fa fa-user"></i>About us</a></li>
+                    <li class="flex-child-1"><a href="{% url 'research' %}"><i class="fa fa-university"></i>Research</a></li>
+                    <li class="flex-child-1"><a href="{% url 'team' %}"><i class="fa fa-users"></i>Our Team</a></li>
+                    <li class="flex-child-1"><a href="{% url 'partnership' %}"><i class="fa fa-handshake-o"></i>Partner with us</a></li>
+                </ul>
+                <div class="wrapper">
+                    <div class="search-box">
+                        <input class="form-control" id="searchCtr" type="search" name="search" placeholder="Type your search keyword..." aria-label="search" />
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="social-media-links">
+                    <a href="https://facebook.com/julien.maganga.71"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/@izoj2013"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/lemba-d-nyirenda-dr-19353211"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="grid-item nav-bar">
+                <div class="menu-icons">
+                    <i class="icon ion-md-menu"></i>
+                    <i class="icon ion-md-close"></i>
+                </div>
+                <a href="{% url 'acr-home' %}" class="brand-logo">
+                    <img class="logo-banner" width="100" height="42" src="{% static 'acrmipsite/images/acr_16.svg' %}" alt="Website-Logo">
+                </a>
+                <div>
+                <ul class="nav-list">
+                    <li><a href="{% url 'csi-jump' %}"><i class="fa fa-laptop"></i>Computer Science Impossibility Jump</a></li>
+                    <li><a href="#"><i class="fa fa-heartbeat"></i>LifeLineNets<i class="icon ion-md-arrow-dropdown"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'lln-es' %}"><i class="fa fa-align-center"></i>LifeLineNets Emergency States</a></li>
+                            <li><a href="{% url 'lln-tr' %}"><i class="fa fa-table"></i>LifeLineNets Topological Reliability</a></li>
+                            <li><a href="#"><i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                LifeLinesNets Critical Infrastructure<i class="icon ion-md-arrow-dropright right-arrow"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="#"><i class="fa fa-cube" aria-hidden="true"></i>
+                                        Critical Power Systems</a></li>
+                                    <li><a href="#"><i class="fa fa-cubes" aria-hidden="true"></i>
+                                        Critical Financial Systems</a></li>
+                                    <li><a href="#"><i class="fa fa-database" aria-hidden="true"></i>
+                                        Critical National Databases<i class="icon ion-md-arrow-dropright right-arrow"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href=""><i class="fa fa-database" aria-hidden="true"></i>
+                                            National Database-1</a></li>
+                                            <li><a href=""><i class="fa fa-database" aria-hidden="true"></i>
+                                            National Database-2</a></li>
+                                            <li><a href=""><i class="fa fa-database" aria-hidden="true"></i>
+                                            National Database-3</a></li>
+                                            <li><a href=""><i class="fa fa-database" aria-hidden="true"></i>
+                                            National Database-4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'smart-grid' %}"><i class="fa fa-th"></i>SmartGrid Systems</a></li>
+                    <li><a href="#"><i class="fa fa-folder"></i>IEC Standards
+                        <i class="icon ion-md-arrow-dropdown"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'iec-stds-conform' %}"><i class="fa fa-folder-open"></i>IEC Standards Conformity</a></li>
+                        <li><a href="{% url 'acfta-iec-stds-eco' %}"><i class="fa fa-folder-open-o"></i>ACFTA IEC Standards Ecosystem</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'illie-dp' %}"><i class="fa fa-medkit"></i>ILLIE - Disaster Protection</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="grid-item main-content">
+                {% block content %} {% endblock content %}
+            </div>
+            <div class="grid-item footer">
+                <div id="footer-container">
+                    <div class="quick-links">
+                        <h3 class="heading-3">Quick Links:</h3>
+                        <ul class="list-items">
+                            <li class="bottom-links"><a href="{% url 'acr-home' %}">Home</a></li>
+                            <li class="bottom-links"><a href="{% url 'about-us' %}">About Us</a></li>
+                            <li class="bottom-links"><a href="{% url 'research' %}">Research</a></li>
+                            <li class="bottom-links"><a href="{% url 'team' %}">Our Team</a></li>
+                            <li class="bottom-links"><a href="{% url 'partnership' %}">Partner With Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="services">
+                        <h3 class="heading-3">Our Services:</h3>
+                        <ul class="list-items">
+                            <li class="bottom-links"><a href="{% url 'csi-jump' %}">Optimized Solutions to Complex Problems </a></li>
+                            <li class="bottom-links"><a href="{% url 'lln-es' %}">LifeLinesNets - Emergency States</a></li>
+                            <li class="bottom-links"><a href="{% url 'lln-tr' %}">LifeLinesNets - Topological Reliability</a></li>
+                            <li class="bottom-links"><a href="{% url 'illie-dp' %}">Integrated LifeLines Infrastructure Emergency - Disaster Protection</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-us">
+                        
+                        <div class="acr-address">
+                            <h3 class="heading-3">Address:</h3>
+                            <p>Department of Electrical and 
+                                Electronic Engineering,<br/> 
+                                University of Zambia,<br/>
+                                Great East Road Campus,<br/>
+                                Lusaka, Zambia.
+                            </p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i>: info@makingimpossiblepossible.com</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i>: +260 211 290979</p>
+                            <p><i class="fa fa-facebook-square" aria-hidden="true"></i>: <a href="https://www.facebook.com/npep">Like Us On Facebook</a></p>
+                            <p><i class="fa fa-linkedin-square" aria-hidden="true"></i>: <a href="https://www.linkedin.com/in/lemba-d-nyirenda-dr-19353211">Connect With Us on LinkedIn</a></p>
+                        </div>
+
+                        {% comment %} <div class="acr_location">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1923.3412947947538!2d28.33058395793825!3d-15.393667211339393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408b6e5794a7b5%3A0xa117683eff91b7a0!2sThe+University+Of+Zambia%2C+School+of+Engneering!5e0!3m2!1sen!2szm!4v1563793202755!5m2!1sen!2szm" 
+                                width="400" 
+                                height="300" 
+                                frameborder="0" 
+                                style="border:0" allowfullscreen>
+                            </iframe>
+                        </div> {% endcomment %}
+                    </div>
+                    <div class="copyrights">
+                        <h4 class="company">&copy; 2020 - 2023, AFRICAN COMPUTING RENAISSANCE</h4>
+                        <h4 class="developer">Developed and Maintained by OKAPI CyberTech.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
