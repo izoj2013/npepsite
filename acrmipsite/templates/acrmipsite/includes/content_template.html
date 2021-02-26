@@ -1,10 +1,16 @@
 {% load static %}
 
-<div class="summary">
-    <img src={% static 'acrmipsite/images/home_computer_board.jpg'%} alt="Right Picture" class="picture-right">
-    <div class="summary-detail">
-        <p>{% lorem 3 b random %}</p>
+<div class="container">
+    <div class="heading-summary">
+        <div class="image-right">
+            <img src={% static 'acrmipsite/images/home_computer_board.jpg'%} alt="Right Picture" class="picture-right">
+        </div>
+        <div class="summary-detail">
+            <p>{% lorem b random %}</p>
+        </div>
+        <div class="image-left">
+            <img src="{% static 'acrmipsite/images/iec_conform.jpg'%}" alt="Left Picture" class="picture-left">
+        </div>
     </div>
-    <img src="{% static 'acrmipsite/images/iec_conform.jpg'%}" alt="Left Picture" class="picture-left">
+    <div class="content-text">{% lorem 10 b random %}</div>
 </div>
-<div class="content-text">{% lorem 10 b random %}</div>
