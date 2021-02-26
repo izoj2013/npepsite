@@ -3,15 +3,17 @@
 
 
 {% block content %}
+    
     <div class="container home-bucket">
-        <div class="home-heading grid-item-1">
+        {% include 'acrmipsite/includes/content_template.html'%}
+        <!-- <div class="home-heading ">
             <h2 class="page-title">ACFTA IEC Standards Ecosystem!</h2>
         </div>
-        <div class="image grid-item-2 flex-image">
+        <div class="image  flex-image">
                 <img class="it-img" src="{% static 'acrmipsite/images/iec_eco.jpg'%}" alt="">
         </div>
-        <div class="text-content grid-item-3">
+        <div class="text-content ">
             <p>{% lorem 10 b random %}</p>
-        </div>
+        </div> -->
     </div>
 {% endblock %}
