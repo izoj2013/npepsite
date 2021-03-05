@@ -412,6 +412,7 @@ nav {
 .image-right .image-left {
 	display: flex;
 	flex-direction: row;
+	position: relative;
 	height: 45px;
 	width: 25%;
 }
@@ -437,8 +438,9 @@ nav {
 
 .picture-right .picture-left {
 	border-radius: 30px;
+	position: relative;
 	width: 25%;
-	height: 30%;
+	height: 45px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	-khtml-border-radius: 30px;
