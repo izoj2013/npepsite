@@ -16,7 +16,7 @@ def research(request):
 
 
 def team(request):
-    return render(request, 'acrmipsite/our_team.html')
+    return render(request, 'acrmipsite/our_team_a.html')
 
 
 def partnership(request):

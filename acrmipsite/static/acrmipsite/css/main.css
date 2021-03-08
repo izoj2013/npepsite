@@ -28,6 +28,10 @@ ul {
 	list-style: none;
 }
 
+.my-3 {
+	margin: 2rem, 0;
+}
+
 .grid-container {
 	display: grid;
 	height: 100%;
@@ -208,11 +212,6 @@ nav {
 	transition: color 650ms;
 }
 
-/* .nav-list a::before {
-	display: none;
-	transition: none;
-} */
-
 .nav-list a:hover {
 	color: #eb3007;
 	background-color: #fff;
@@ -226,7 +225,7 @@ nav {
 .sub-menu {
 	filter: blur(0);
 	display: block;
-	width: 35rem;
+	width: 38rem;
 	position: absolute;
 	border-top: 3px solid #eb3007;
 	border-radius: 4px;
@@ -280,63 +279,6 @@ nav {
 	float: right;
 }
 
-@media screen and (max-width: 850px) {
-	.nav-list {
-		display: none;
-		position: fixed;
-		align-items: initial;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		flex-direction: column;
-		background-color: #191919;
-		z-index: 1000;
-		overflow-y: scroll;
-	}
-
-	nav-list > li {
-		line-height: 6rem;
-	}
-
-	.sub-menu {
-		position: initial;
-		border: 3px solid transparent;
-		border-left-color: #eb3007;
-		margin-left: 1rem;
-		max-height: 0;
-	}
-
-	.sub-menu::before {
-		display: none;
-	}
-
-	.nav-list li:hover > .sub-menu {
-		opacity: 1;
-		visibility: visible;
-		max-height: initial;
-	}
-
-	.menu-icons {
-		display: block;
-	}
-
-	.ion-md-close {
-		display: none;
-	}
-
-	nav.active .ion-md-close {
-		display: block;
-	}
-
-	nav.active .ion-md-menu {
-		display: none;
-	}
-
-	nav.active .nav-list {
-		display: flex;
-	}
-}
-
 .main-content {
 	display: flex;
 	grid-area: 3 / 1 / 4 / 5;
@@ -345,11 +287,11 @@ nav {
 }
 
 .home-bucket {
-	display: flexbox;
-	padding: 4px 12px 4px 12px;
+	display: flex;
+	flex-direction: column;
 	text-align: justify;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin: 5px 10px;
+	padding: 6px 30px;
 	color: #fff;
 }
 
@@ -370,12 +312,27 @@ nav {
 	font-size: large;
 }
 
+.content-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 85%;
+}
+
 .flex-image {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 25%;
 	height: 100%;
-	padding: 10px 5px 0px 10px;
+	padding: 10px 15px;
+}
+
+.brief-summary {
+	width: 50%;
+	font-size: 1.5rem;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-weight: bold;
 }
 
 .it-img {
@@ -386,6 +343,47 @@ nav {
 	overflow: hidden;
 }
 
+/* New Page 4 our Team */
+.grid-team {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.flex-member {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.grid-team img {
+	width: 180px;
+	justify-self: flex-start;
+	border-radius: 30px;
+	padding: 5px 10px;
+}
+
+.grid-team .member-bio {
+	width: 980px;
+	justify-self: flex-end;
+	padding: 5px 10px;
+}
+
+.member-name {
+	font-size: 32px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+}
+
+.member-brief {
+	font-size: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .it-img-x {
 	border-radius: 30px;
 	-webkit-border-radius: 30px;
@@ -393,70 +391,18 @@ nav {
 	-khtml-border-radius: 30px;
 	overflow: hidden;
 	padding: 4px 4px 4px 0px;
+	width: 180px;
 }
-
-/* Start of css for the include file */
-
-.container {
-	box-sizing: border-box;
-	margin: 2px;
-}
-
-.heading-summary {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 4px;
-}
-
-.image-right .image-left {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	height: 45px;
-	width: 25%;
-}
-
-.summary-detail {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	font-size: 20px;
-	font-family: cursive;
-	text-justify: center;
-}
-
-.content-text {
-	display: flex;
-	flex-direction: column;
-	padding: 4px 15px 4px 15px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size: medium;
-	color: #8b8b8b;
-}
-
-.picture-right .picture-left {
-	border-radius: 30px;
-	position: relative;
-	width: 25%;
-	height: 45px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	-khtml-border-radius: 30px;
-	overflow: hidden;
-	padding: 4px 4px 4px 0px;
-}
-
-/* End of css for the include file */
 
 .text-content {
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row;
 	align-self: stretch;
-	padding: 6px 0px 10px 20px;
-	width: 100%;
-	font-size: 13px;
+	justify-content: center;
+	text-align: justify;
+	padding: 20px 40px;
+	font-size: 16px;
+	width: 80%;
 }
 
 .footer {
@@ -569,4 +515,62 @@ nav {
 	font-family: "Gothic Flankin", sans serif;
 	font-size: 1rem;
 	color: #fff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 850px) {
+	.nav-list {
+		display: none;
+		position: fixed;
+		align-items: initial;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		flex-direction: column;
+		background-color: #191919;
+		z-index: 1000;
+		overflow-y: scroll;
+	}
+
+	nav-list > li {
+		line-height: 6rem;
+	}
+
+	.sub-menu {
+		position: initial;
+		border: 3px solid transparent;
+		border-left-color: #eb3007;
+		margin-left: 1rem;
+		max-height: 0;
+	}
+
+	.sub-menu::before {
+		display: none;
+	}
+
+	.nav-list li:hover > .sub-menu {
+		opacity: 1;
+		visibility: visible;
+		max-height: initial;
+	}
+
+	.menu-icons {
+		display: block;
+	}
+
+	.ion-md-close {
+		display: none;
+	}
+
+	nav.active .ion-md-close {
+		display: block;
+	}
+
+	nav.active .ion-md-menu {
+		display: none;
+	}
+
+	nav.active .nav-list {
+		display: flex;
+	}
 }

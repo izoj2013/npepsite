@@ -1,0 +1,25 @@
+{% extends 'acrmipsite/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="container home-bucket">
+        <div class="home-heading">
+            <h2 class="page-title">Our Team!</h2>
+        </div>
+        <div class="team grid-team">
+            <div class="member flex-member">
+                <img class="it-img-x" src="{% static 'acrmipsite/images/ld_nyirenda.png'%}" alt="">
+                <div class="member-bio">
+                    <h2 class="member-name">Dr. Lemba D. Nyirenda</h2>
+                    <p class="member-brief">He is the Lead Researcher and Inventor of the NP = P Transform</p><br/>
+                </div>
+            </div>
+            <div class="member flex-member">
+                <img class="it-img-x" src="{% static 'acrmipsite/images/KingJ02.jpg'%}" alt="">
+                <div class="member-bio">
+                    <h2 class="member-name">Mr. Julien M. Shabani</h2>
+                    <p class="member-brief">He is a researcher and IT Specilaist in Software Engineering and Cyber Security</p><br/>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
