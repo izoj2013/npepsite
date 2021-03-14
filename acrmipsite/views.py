@@ -2,9 +2,32 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 
+homeTitles = ["Welcome to the African Computing Renaissance Home Page!",
+             "About Us Page!",
+             "ACFTA IEC Standards Ecosystem!",
+             "Computer Science Impossibility Jump!",
+             "IEC Standards Conformity!",
+             "Integrated Lifelines Infrastructure Emergency - Disaster Protection!",
+             "LifeLinesNets Emergency States Page!",
+             "LifeLinesNets Topological Reliability Page!",
+             "Partner With Us",
+             "Our Research Areas Page!",
+             "Smart Grid Systems @EEE Research Group - UNZA"
+            ]
+homeTitle = "Welcome to the African Computing Renaissance Home Page!"
+imgURL = "acrmipsite/images/home_computer_board.jpg"
+loremHeader = "lorem 3 p"
+loremContentTxt = 'lorem 10 b random'
+
 
 def home(request):
-    return render(request, 'acrmipsite/home.html')
+    return render(request, 'acrmipsite/home.html',
+                  context= {
+                      'title': homeTitle,
+                      'imgUrl': imgURL,
+                      'hdrText': loremHeader,
+                      'contentTxt': loremContentTxt
+                  })
 
 
 def about(request):

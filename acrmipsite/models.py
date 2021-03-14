@@ -1,4 +1,5 @@
 from django.db import models
+#from PIL import Image
 class Page(models.Model):
     title = models.CharField(max_length=64)
     #picLeft = models.ImageField(width_field=48, height_field=48)
