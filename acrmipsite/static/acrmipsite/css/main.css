@@ -309,6 +309,7 @@ nav {
 .home-heading {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 	text-align: center;
 	padding: 8px 0px 12px 0px;
