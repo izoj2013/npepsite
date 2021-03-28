@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+        <link  rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'acrmipsite/css/main.css'%}">
+        <script src="{% static 'acrmipsite/js/active.js'%}" type="text/javascript"></script>
+        <title>African Computing Renaissance</title>
+    </head>
+    <body>
+        <section id="container" class="top-header">
+            <nav class="menu-area">
+                <ul>
+                    <li><a href="{%url 'acr-home'%}"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="{%url 'about-us'%}"><i class="fa fa-users"></i>About Us</a></li>
+                    <li><a href="{%url 'research'%}"><i class="fa fa-university"></i>Research</a></li>
+                    <li><a href="{%url 'team'%}"><i class="fa fa-user"></i>Our Team</i></a></li>
+                    <li><a href="{%url 'partnership'%}"><i class="fa fa-handshake-o"></i>Partner with Us</i></a></li>
+                    <li class="icon-area">
+                        <a href="https://facebook.com/julien.maganga.71"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="icon-area">
+                        <a href="https://twitter.com/@izoj2013"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="icon-area">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li class="icon-area">
+                        <a href="https://www.linkedin.com/in/lemba-d-nyirenda-dr-19353211"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <div class="search-box">
+                        <input class="form-control" id="searchCtr" type="search" name="search" placeholder="Search here..." aria-label="search" />
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </ul>
+            </nav>
+        </section>
+        <section id="given-page" class="main-content db-content">
+            {% block content %} {% endblock content %}
+        </section>
+        <section class="footer">
+            <div id="footer-container">
+                <div class="quick-links">
+                    <h3 class="heading-3">Quick Links:</h3>
+                    <ul class="list-items">
+                        <li class="bottom-links"><a href="{% url 'acr-home' %}">Home</a></li>
+                        <li class="bottom-links"><a href="{% url 'about-us' %}">About Us</a></li>
+                        <li class="bottom-links"><a href="{% url 'research' %}">Research</a></li>
+                        <li class="bottom-links"><a href="{% url 'team' %}">Our Team</a></li>
+                        <li class="bottom-links"><a href="{% url 'partnership' %}">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="services">
+                    <h3 class="heading-3">Our Services:</h3>
+                    <ul class="list-items">
+                        <li class="bottom-links"><a href="{% url 'csi-jump' %}">Optimized Solutions to Complex Problems </a></li>
+                        <li class="bottom-links"><a href="{% url 'lln-es' %}">LifeLinesNets - Emergency States</a></li>
+                        <li class="bottom-links"><a href="{% url 'lln-tr' %}">LifeLinesNets - Topological Reliability</a></li>
+                        <li class="bottom-links"><a href="{% url 'illie-dp' %}">Integrated LifeLines Infrastructure Emergency - Disaster Protection</a></li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <div class="acr-address">
+                        <h3 class="heading-3">Address:</h3>
+                        <p>Department of Electrical and 
+                            Electronic Engineering,<br/> 
+                            University of Zambia,<br/>
+                            Great East Road Campus,<br/>
+                            Lusaka, Zambia.
+                        </p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i>: info@makingimpossiblepossible.com</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>: +260 211 290979</p>
+                        <p><i class="fa fa-facebook-square" aria-hidden="true"></i>: <a href="https://www.facebook.com/npep">Like Us On Facebook</a></p>
+                        <p><i class="fa fa-linkedin-square" aria-hidden="true"></i>: <a href="https://www.linkedin.com/in/lemba-d-nyirenda-dr-19353211">Connect With Us on LinkedIn</a></p>
+                    </div> 
+                    <div class="copyrights my-license">
+                        <h4 class="company">&copy; 2020 - 2023, AFRICAN COMPUTING RENAISSANCE</h4>
+                        <h4 class="developer">Developed and Maintained by OKAPI CyberTech.</h4>
+                    </div>                  
+                </div>
+        </section>
+    </body>
